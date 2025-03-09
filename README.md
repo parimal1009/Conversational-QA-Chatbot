@@ -1,21 +1,42 @@
-# Conversational Q&A Chatbot
+# RAG QnA Bot & LLM Validation
 
 ## Overview
-This project is an **AI-powered conversational chatbot** designed to answer queries from custom documents. It leverages **Retrieval-Augmented Generation (RAG)** to enhance response accuracy by retrieving relevant information before generating answers.
+This project implements a **Retrieval-Augmented Generation (RAG) QnA Bot** alongside a **Large Language Model (LLM) Validation** system. The primary goal is to enhance the accuracy and reliability of responses by integrating an information retrieval system with an LLM, ensuring factually correct and contextually relevant answers.
 
 ## Features
-- **Custom Document Querying**: The chatbot can answer questions based on user-provided documents.
-- **Retrieval-Augmented Generation (RAG)**: Enhances response accuracy using LangChain and LlamaIndex.
-- **LLM-Based Responses**: Utilizes OpenAI's API for natural language understanding and response generation.
-- **FastAPI Backend**: Ensures efficient request handling and API integration.
-- **Interactive UI**: Developed with Streamlit for real-time user interaction and chatbot testing.
-- **Optimized Retrieval Pipelines**: Improves context-awareness and response relevance.
+- **Retrieval-Augmented Generation (RAG) QnA**: Retrieves relevant documents before generating answers using an LLM.
+- **LLM Validation**: Cross-verifies responses to detect hallucinations and improve accuracy.
+- **Contextual Awareness**: Enhances response quality by incorporating retrieved knowledge.
+- **Scalable and Modular**: Designed for easy integration with various data sources and LLMs.
 
 ## Tech Stack
-- **Programming Language**: Python
-- **Frameworks & Libraries**:
-  - [LangChain](https://python.langchain.com/) – For retrieval-augmented generation
-  - [LlamaIndex](https://gpt-index.readthedocs.io/) – For document indexing and retrieval
-  - [OpenAI API](https://platform.openai.com/docs/) – For LLM-based response generation
-  - [FastAPI](https://fastapi.tiangolo.com/) – For efficient backend handling
-  - [Streamlit](https://streamlit.io/) – For frontend interaction
+- **Python** (Primary language)
+- **LangChain** (For retrieval-augmented generation)
+- **FAISS** / **ChromaDB** (Vector database for efficient retrieval)
+- **Hugging Face Transformers / OpenAI API** (LLM models)
+- **FastAPI** (For API deployment)
+- **Streamlit** (Frontend for interactive QnA experience)
+
+
+## Usage
+```sh
+# Run the backend API
+uvicorn app:main --host 0.0.0.0 --port 8000
+
+# Run the Streamlit UI
+streamlit run app.py
+```
+
+## How It Works
+1. **Query Processing**: The user inputs a question.
+2. **Document Retrieval**: The system fetches relevant documents from a knowledge base.
+3. **LLM Response Generation**: The LLM generates an answer using retrieved context.
+4. **Validation Mechanism**: The response is validated against trusted sources.
+5. **Final Response**: The validated response is displayed to the user.
+
+## Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+## License
+MIT License. See `LICENSE` for details.
+
