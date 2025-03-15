@@ -1,4 +1,4 @@
-# RAG QnA Bot & LLM Validation
+# RAG QnA Bot & LLM Validation  (use the navigation bar to select the app)
 
 ## Overview
 This project implements a **Retrieval-Augmented Generation (RAG) QnA Bot** alongside an **LLM Validation** system. The primary goal is to enhance response accuracy and reliability by integrating an information retrieval system with an LLM, ensuring factually correct and contextually relevant answers.
