@@ -1,0 +1,28 @@
+# FastAPI and Server
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+
+# LangChain Core
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+
+# Vector Store and Embeddings
+faiss-cpu
+sentence-transformers
+
+# Document Processing
+pymupdf
+
+# Search Tools
+duckduckgo-search>=5.0.0
+ddgs
+arxiv
+wikipedia
+
+# Utilities
+pydantic
+pydantic-settings
